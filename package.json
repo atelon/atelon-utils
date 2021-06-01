@@ -1,0 +1,62 @@
+{
+  "name": "@atelon/utils",
+  "version": "0.0.1",
+  "description": "The generic utility library.",
+  "author": "atelon",
+  "private": false,
+  "license": "MIT",
+  "main": "dist/main.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc --project tsconfig.build.json",
+    "build:all": "npm run clean && npm run format && npm run lint && npm run test && npm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build:dev": "tsc --project tsconfig.json",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix",
+    "test": "jest --detectOpenHandles",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "typedoc": "typedoc --tsconfig tsconfig.doc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atelon/utils.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.36",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-sonarjs": "^0.7.0",
+    "eslint-plugin-unicorn": "^32.0.1",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.36",
+    "typedoc-plugin-markdown": "^3.8.2",
+    "typescript": "^4.3.2"
+  },
+  "bugs": {
+    "url": "https://github.com/atelon/utils/issues"
+  },
+  "homepage": "https://github.com/atelon/utils#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix && exec < /dev/tty && git cz --hook || true"
+    }
+  }
+}

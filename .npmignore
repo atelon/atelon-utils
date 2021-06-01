@@ -1,0 +1,15 @@
+/.docker
+/.docker-compose
+/.vscode
+/docs
+/src
+/.czrc
+/.dockerignore
+/.editorconfig
+/.editorconfig
+/.eslintignore
+/.eslintrc.js
+/.prettierrc
+/.jest.config.js
+/.tsconfig.*
+

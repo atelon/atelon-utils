@@ -1,0 +1,19 @@
+version: '3'
+services:
+    app:
+        container_name: utils
+        build:
+            dockerfile: ./.docker/node.js.build.Dockerfile
+            context: ${PWD}
+        volumes:
+            - node-vol:/home/node/app
+            - /home/node/app/node_modules
+
+volumes:
+    database-data:
+    node-vol:
+      driver: local
+      driver_opts:
+        type: none
+        device: ${PWD}
+        o: bind
