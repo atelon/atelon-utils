@@ -8,6 +8,7 @@ module.exports = {
       "always",
       [
         "breaking",
+        "ci",
         "feat",
         "fix",
         "refactor",
