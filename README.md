@@ -5,7 +5,6 @@ The generic utility library.
 ## Table of Contents
 
   - [Installing](#installing)
-  - [Example](#example)
   - [API](#api)
   - [Development](#development)
   - [Debug](#debug)
@@ -19,23 +18,6 @@ Using npm:
 ```bash
 $ npm install @atelon/utils
 ```
-
-## Example
-
-```ts
-import { isDefined } from  @atelon/utils;
-
-if (isDefined(undefined)) {
-  console.log('The value is defined');
-}
-else {
-  console.log('The value is undefined');
-}
-
-// Output:
-// The value is undefined
-```
-
 ## API
 
 See [api file](./docs/modules.md).
