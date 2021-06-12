@@ -1,5 +1,5 @@
-module.exports = async () => {
-  return {
+// eslint-disable-next-line unicorn/prefer-module
+module.exports = () => ({
     moduleFileExtensions: ['js', 'json', 'ts'],
     rootDir: 'src',
     testRegex: '.*\\.spec\\.ts$',
@@ -9,5 +9,4 @@ module.exports = async () => {
     collectCoverageFrom: ['**/*.(t|j)s'],
     coverageDirectory: '../coverage',
     testEnvironment: 'node',
-  };
-};
+  });
