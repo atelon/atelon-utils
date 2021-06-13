@@ -24,15 +24,15 @@ See [api file](./docs/modules.md).
 
 ## Development
 
-Write some changes. Typedoc is not working under docker, so run it manually. Use Visual Studio Code to build project with commands: app-build.
+Use Visual Studio Code to run command `Run Build Task...` after you finish to make changes.
 
 ## Debug
 
-Use Visual Studio Code to run commands: compose-up-debug, compose-down-debug.
+Use Visual Studio Code to run command `Run Task -> test:debug` after you finish to make changes.
 
 ## Testing
 
-Use Visual Studio Code to run commands: app-test.
+Use Visual Studio Code to run command `Run Task -> test` after you finish to make changes.
 
 ## License
 
