@@ -9,6 +9,7 @@ module.exports = {
       [
         "breaking",
         "ci",
+        "chore",
         "feat",
         "fix",
         "refactor",
